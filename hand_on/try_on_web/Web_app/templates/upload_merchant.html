@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>商家图像数据上传</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>商家图像数据上传</h1>
+        <nav>
+            <a href="/">首页</a> |
+            <a href="/about">项目说明</a> |
+            <a href="/data">数据上传</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>上传商品图像</h2>
+            <form action="/upload_merchant" method="post" enctype="multipart/form-data">
+                <label for="image">选择图像文件:</label>
+                <input type="file" id="image" name="image" required>
+                <button type="submit">上传</button>
+            </form>
+            <!-- 添加查看商家数据的按钮 -->
+            <div>
+                <a href="{{ url_for('view_merchant_images') }}" class="button">查看商家图像</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>版权所有 © 2024 幻裳智界</p>
+    </footer>
+</body>
+</html>

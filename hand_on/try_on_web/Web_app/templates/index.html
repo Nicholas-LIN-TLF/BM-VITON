@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>幻裳智界</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>欢迎来到美丽的教堂</h1>
+        <nav>
+            <a href="/">首页</a> |
+            <a href="/about">项目说明</a> |
+            <!--<a href="/data">数据上传</a>-->
+            <a href="/wardrobe_magic">衣橱与魔法镜</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>项目介绍</h2>
+            <p>大创项目：BM-VITON——基于扩散模型和生成网络的虚拟试衣系统</p>
+            <img src="../static/Image_material/Index_logo.png" alt="BM-VITON Logo" width=512 height=512 >
+        </section>
+    </main>
+
+    <!-- 右侧竖排导航栏 -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="/wardrobe_magic">快速试用</a></li>
+            <li><a href="/infinite_wardrobe">心仪衣物上传</a></li>
+            <li><a href="/magic_camera">用户人像上传</a></li>
+        </ul>
+    </aside>
+
+    <!-- 控制按钮（小箭头） -->
+    <div class="toggle-btn" id="toggleBtn">&#9664;</div>
+
+    <footer>
+        <p>版权所有 © 2025 幻裳智界</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

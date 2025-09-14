@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px; /* Reduced margin for better spacing on small screens */
+    text-decoration: none;
+    display: inline-block; /* Ensure links are block-level for better clickability */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 15px; /* Reduced padding for smaller screens */
+}
+
+section {
+    background-color: #fff;
+    padding: 15px; /* Reduced padding for smaller screens */
+    margin: 15px 0; /* Reduced margin for smaller screens */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Change to relative to avoid overlapping content */
+    width: 100%;
+}
+
+.upload-buttons {
+    margin-top: 15px; /* Reduced margin for smaller screens */
+}
+
+button {
+    background-color: #4CAF50; /* 绿色 */
+    border: none;
+    color: white;
+    padding: 12px 28px; /* Reduced padding for smaller screens */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Reduced font size for smaller screens */
+    margin: 2px 1px; /* Reduced margin for smaller screens */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    width: 100%; /* Make button full width on small screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    nav a {
+        display: block; /* Stack links vertically on small screens */
+        margin: 10px 0; /* Increased margin for better spacing */
+    }
+
+    .upload-buttons {
+        display: block; /* Stack buttons vertically on small screens */
+    }
+
+    button {
+        margin: 5px 0; /* Adjust margin for stacked buttons */
+    }
+}
+
+/* 竖排导航栏（默认隐藏在右侧） */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -160px; /* 默认缩回去 */
+    width: 160px;
+    height: 100%;
+    background-color: #555; /* 灰底 */
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0; /* 展开时滑出 */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white; /* 白字 */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #333; /* 悬停变深灰 */
+    border-radius: 8px;
+}
+
+/* 小箭头按钮 */
+.toggle-btn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 48px;
+    background-color: #555;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px 0 0 8px;
+    z-index: 1100;
+}

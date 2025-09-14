@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>用户数据上传</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>商家&顾客数据上传</h1>
+        <nav>
+            <!-- 导航链接可以在这里添加 -->
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>数据上传</h2>
+            <p>祝大家美丽每一天</p>
+            <div class="upload-buttons">
+                <button onclick="location.href='/upload_merchant'">商家商品图像数据上传</button>
+                <button onclick="location.href='/upload_customer'">顾客照片数据上传</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>版权所有 © 2024 幻裳智界</p>
+    </footer>
+</body>
+</html>
